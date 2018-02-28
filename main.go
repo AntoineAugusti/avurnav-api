@@ -4,6 +4,7 @@ import (
 	"flag"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/AntoineAugusti/avurnav"
@@ -78,7 +79,9 @@ func main() {
 	service.VersionRoute = "/version"
 	service.HeartbeatRoute = "/heartbeat"
 
-	address := flag.String("a", envWithFallback("PORT", ":8080"), "HTTP address to listen to")
+	port := ":" + strings.TrimLeft(envWithFallback("PORT", "8080"), ":")
+
+	address := flag.String("a", port, "HTTP address to listen to")
 	redisURL := flag.String("redis-url", envWithFallback("REDIS_URL", ":6379"), "Redis URL to connect to")
 	flag.Parse()
 
