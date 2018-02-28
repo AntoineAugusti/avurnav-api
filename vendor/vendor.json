@@ -1,0 +1,127 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "j5lrUUvdX/IICLK/vg9TG9h6Zvs=",
+			"path": "github.com/certifi/gocertifi",
+			"revision": "deb3ae2ef2610fde3330947281941c562861188b",
+			"revisionTime": "2018-01-18T20:34:23Z"
+		},
+		{
+			"checksumSHA1": "IUtjjPdjirvn1kNNSW9a22aGkFI=",
+			"path": "github.com/cloudflare/service",
+			"revision": "60a913fd224ee887b4d0209ac43a68593c2b768a",
+			"revisionTime": "2015-12-16T13:20:27Z"
+		},
+		{
+			"checksumSHA1": "x5A1lSsu1W4wb2f+M12XAzgKpos=",
+			"path": "github.com/cloudflare/service/log",
+			"revision": "60a913fd224ee887b4d0209ac43a68593c2b768a",
+			"revisionTime": "2015-12-16T13:20:27Z"
+		},
+		{
+			"checksumSHA1": "LYQ6ZGbVJdlTz4DsSqHuCcD3GII=",
+			"path": "github.com/cloudflare/service/render",
+			"revision": "60a913fd224ee887b4d0209ac43a68593c2b768a",
+			"revisionTime": "2015-12-16T13:20:27Z"
+		},
+		{
+			"checksumSHA1": "MwazWD3ttZyMbTOPrzp/XTKbhMo=",
+			"path": "github.com/codegangsta/negroni",
+			"revision": "22c5532ea862c34fdad414e90f8cc00b4f6f4cab",
+			"revisionTime": "2018-01-30T04:45:49Z"
+		},
+		{
+			"checksumSHA1": "CSPbwbyzqA6sfORicn4HFtIhF/c=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "8991bc29aa16c548c550c7ff78260e27b9ab7c73",
+			"revisionTime": "2018-02-21T22:46:20Z"
+		},
+		{
+			"checksumSHA1": "mlrXH+qt8FPQ0p+bEm4o1RKH/gk=",
+			"path": "github.com/getsentry/raven-go",
+			"revision": "563b81fc02b75d664e54da31f787c2cc2186780b",
+			"revisionTime": "2018-01-18T02:48:39Z"
+		},
+		{
+			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "Ne2HHjBVT8tegOp3l3ataHYmq9M=",
+			"path": "github.com/gorilla/mux",
+			"revision": "07ba1fd60e210dc5cc6f86ec25dc9ecc7c95c295",
+			"revisionTime": "2018-02-26T05:11:51Z"
+		},
+		{
+			"checksumSHA1": "kOx3xMnoxVITee1UKRKaCZGR2ws=",
+			"path": "github.com/mistifyio/negroni-pprof",
+			"revision": "2a62995458998fd92d7d3487370bb0bc73591b93",
+			"revisionTime": "2014-08-12T17:54:02Z"
+		},
+		{
+			"checksumSHA1": "ljd3FhYRJ91cLZz3wsH9BQQ2JbA=",
+			"path": "github.com/pkg/errors",
+			"revision": "30136e27e2ac8d167177e8a583aa4c3fea5be833",
+			"revisionTime": "2018-01-27T01:58:12Z"
+		},
+		{
+			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "792786c7400a136282c1664665ae0a8db921c6c2",
+			"revisionTime": "2016-01-10T10:55:54Z"
+		},
+		{
+			"checksumSHA1": "5QKvAdxb0E47Nzn7iI25AfgAvOI=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "be8372ae8ec5c6daaed3cc28ebf73c54b737c240",
+			"revisionTime": "2018-02-02T15:35:43Z"
+		},
+		{
+			"checksumSHA1": "3Y2ZemkxaOSr6yq5xAyItl/vYMk=",
+			"path": "github.com/stretchr/testify/require",
+			"revision": "be8372ae8ec5c6daaed3cc28ebf73c54b737c240",
+			"revisionTime": "2018-02-02T15:35:43Z"
+		},
+		{
+			"checksumSHA1": "YzO0qrqccO8XV/Tt3PiiMv4djxs=",
+			"path": "github.com/ulule/limiter",
+			"revision": "54a63f76da4871ee626e4a6c3df12a4304b64b2f",
+			"revisionTime": "2018-02-19T10:14:15Z"
+		},
+		{
+			"checksumSHA1": "hkmo8uVrehSVGVG2LkOseAaoSBg=",
+			"path": "github.com/ulule/limiter/drivers/middleware/stdlib",
+			"revision": "54a63f76da4871ee626e4a6c3df12a4304b64b2f",
+			"revisionTime": "2018-02-19T10:14:15Z"
+		},
+		{
+			"checksumSHA1": "vuXVN2SXaRasZk/XnQmviFBsyGM=",
+			"path": "github.com/ulule/limiter/drivers/store/common",
+			"revision": "54a63f76da4871ee626e4a6c3df12a4304b64b2f",
+			"revisionTime": "2018-02-19T10:14:15Z"
+		},
+		{
+			"checksumSHA1": "4Zs9IDhHW4QTMc0Fu/XlPeVjFa8=",
+			"path": "github.com/ulule/limiter/drivers/store/memory",
+			"revision": "54a63f76da4871ee626e4a6c3df12a4304b64b2f",
+			"revisionTime": "2018-02-19T10:14:15Z"
+		},
+		{
+			"checksumSHA1": "/CkShsXSmW4032TjVej9ZwhjxOY=",
+			"path": "github.com/unrolled/render",
+			"revision": "65450fb6b2d3595beca39f969c411db8f8d5c806",
+			"revisionTime": "2017-11-02T16:21:32Z"
+		},
+		{
+			"checksumSHA1": "LGlZeYyIkD/u1qTiZ+4mjW1qtOg=",
+			"path": "github.com/wblakecaldwell/profiler",
+			"revision": "6111ef1313a14d223d3056a6baa653ea5a6672a8",
+			"revisionTime": "2015-09-08T04:06:48Z"
+		}
+	],
+	"rootPath": "github.com/AntoineAugusti/avurnav-api"
+}
