@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/AntoineAugusti/avurnav"
@@ -63,14 +64,22 @@ func refreshAVURNAVs(fetcher *avurnav.AVURNAVFetcher, storage avurnav.Storage) {
 	storage.RegisterAVURNAVs(res)
 }
 
+func envWithFallback(key, fallback string) string {
+	val, ok := os.LookupEnv(key)
+	if !ok {
+		return fallback
+	}
+	return val
+}
+
 func main() {
 	service.BuildTag = buildTag
 	service.BuildDate = buildDate
 	service.VersionRoute = "/version"
 	service.HeartbeatRoute = "/heartbeat"
 
-	address := flag.String("a", ":8080", "HTTP address to listen to")
-	redisURL := flag.String("redis-url", ":6379", "Redis URL to connect to")
+	address := flag.String("a", envWithFallback("PORT", ":8080"), "HTTP address to listen to")
+	redisURL := flag.String("redis-url", envWithFallback("REDIS_URL", ":6379"), "Redis URL to connect to")
 	flag.Parse()
 
 	storage := avurnav.NewStorage(redis.NewClient(&redis.Options{
