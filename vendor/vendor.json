@@ -3,6 +3,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "xMuVz5pG7SC7rIezaclcXI8qoiU=",
+			"path": "github.com/AntoineAugusti/avurnav",
+			"revision": "cfe158654ab5174399940eebe6d0f9ab55e0bbf7",
+			"revisionTime": "2018-02-28T10:59:11Z"
+		},
+		{
 			"checksumSHA1": "j5lrUUvdX/IICLK/vg9TG9h6Zvs=",
 			"path": "github.com/certifi/gocertifi",
 			"revision": "deb3ae2ef2610fde3330947281941c562861188b",
@@ -43,6 +49,54 @@
 			"path": "github.com/getsentry/raven-go",
 			"revision": "563b81fc02b75d664e54da31f787c2cc2186780b",
 			"revisionTime": "2018-01-18T02:48:39Z"
+		},
+		{
+			"checksumSHA1": "bo72XY/idtgLf5/Asl5LGYcMwJk=",
+			"path": "github.com/go-redis/redis",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "L/n8TwOiRwhhL2TvFNafxB6rAwY=",
+			"path": "github.com/go-redis/redis/internal",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "GQZsUVg/+6UpQAYpc4luMvMutSI=",
+			"path": "github.com/go-redis/redis/internal/consistenthash",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "GE9tg94JwCzMbBwn3Q2LaFs5Rx0=",
+			"path": "github.com/go-redis/redis/internal/hashtag",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "AtcctlDri3zLh6U5sDnT4NULEtw=",
+			"path": "github.com/go-redis/redis/internal/pool",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "Ald9dRvbdyQwFi+iSP/8osnhaes=",
+			"path": "github.com/go-redis/redis/internal/proto",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "sjbjSJrTdvyDwNjrWjTNeXgUhaU=",
+			"path": "github.com/go-redis/redis/internal/singleflight",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
+		},
+		{
+			"checksumSHA1": "SvyqZrzHTVxCIBoawql2ucvfWLE=",
+			"path": "github.com/go-redis/redis/internal/util",
+			"revision": "55c9929dbaa1362cf9af13fab0f46bf8fde8fe84",
+			"revisionTime": "2018-02-27T18:05:21Z"
 		},
 		{
 			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
@@ -121,6 +175,24 @@
 			"path": "github.com/wblakecaldwell/profiler",
 			"revision": "6111ef1313a14d223d3056a6baa653ea5a6672a8",
 			"revisionTime": "2015-09-08T04:06:48Z"
+		},
+		{
+			"checksumSHA1": "KicKT3XIQER5CM6DUGLWQxkvekM=",
+			"path": "github.com/yhat/scrape",
+			"revision": "24b7890b0945459dbf91743e4d2ac5d75a51fee2",
+			"revisionTime": "2016-11-28T14:46:10Z"
+		},
+		{
+			"checksumSHA1": "L68uqaYKEOxkq2xwnNV2bRP7yO4=",
+			"path": "golang.org/x/net/html",
+			"revision": "cbe0f9307d0156177f9dd5dc85da1a31abc5f2fb",
+			"revisionTime": "2018-02-18T17:15:52Z"
+		},
+		{
+			"checksumSHA1": "NvlH++AI8+25Z2Vs8WKxLVCNrxo=",
+			"path": "golang.org/x/net/html/atom",
+			"revision": "cbe0f9307d0156177f9dd5dc85da1a31abc5f2fb",
+			"revisionTime": "2018-02-18T17:15:52Z"
 		}
 	],
 	"rootPath": "github.com/AntoineAugusti/avurnav-api"
