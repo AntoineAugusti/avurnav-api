@@ -73,6 +73,19 @@ func envWithFallback(key, fallback string) string {
 	return val
 }
 
+func NewRedis(url string) *redis.Client {
+	redisOptions, err := redis.ParseURL(url)
+	if err != nil {
+		panic(err)
+	}
+
+	redisClient := redis.NewClient(redisOptions)
+	if err := redisClient.Ping().Err(); err != nil {
+		panic(err)
+	}
+	return redisClient
+}
+
 func main() {
 	service.BuildTag = buildTag
 	service.BuildDate = buildDate
@@ -85,9 +98,7 @@ func main() {
 	redisURL := flag.String("redis-url", envWithFallback("REDIS_URL", ":6379"), "Redis URL to connect to")
 	flag.Parse()
 
-	storage := avurnav.NewStorage(redis.NewClient(&redis.Options{
-		Addr: *redisURL,
-	}))
+	storage := avurnav.NewStorage(NewRedis(*redisURL))
 
 	go func() {
 		client := http.Client{
