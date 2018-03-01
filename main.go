@@ -92,10 +92,11 @@ func main() {
 	service.VersionRoute = "/version"
 	service.HeartbeatRoute = "/heartbeat"
 
-	port := ":" + strings.TrimLeft(envWithFallback("PORT", "8080"), ":")
+	defaultHTTPPort := ":" + strings.TrimLeft(envWithFallback("PORT", "8080"), ":")
+	defaultRedisURL := envWithFallback("REDIS_URL", "redis://localhost:6379")
 
-	address := flag.String("a", port, "HTTP address to listen to")
-	redisURL := flag.String("redis-url", envWithFallback("REDIS_URL", ":6379"), "Redis URL to connect to")
+	address := flag.String("a", defaultHTTPPort, "HTTP address to listen to")
+	redisURL := flag.String("redis-url", defaultRedisURL, "Redis URL to connect to")
 	flag.Parse()
 
 	storage := avurnav.NewStorage(NewRedis(*redisURL))
