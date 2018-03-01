@@ -17,7 +17,9 @@
   paths:
     /avurnavs/regions/{region}:
       get:
-        description: "Retourne les AVURNAVs actuellement en vigueur dans la région d'un Préfet Maritime"
+        description: >
+          Retourne les AVURNAVs actuellement en vigueur dans la région d'un Préfet Maritime.
+          Cet endpoint est limité à 10 requêtes / minute.
         produces:
           - "application/json"
         parameters:

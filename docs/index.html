@@ -17,7 +17,7 @@
           <span aria-hidden="true">×</span>
         </button>
         <nav id="nav" role="navigation">
-          <h5>API Reference</h5>
+          <h5>Topics</h5>
           <a href="#introduction">Introduction</a>
           <h5>Paths</h5>
           <!-- <section>
@@ -38,10 +38,10 @@
         </button>
         <div class="example-box doc-content"></div>
         <article>
+          <h1 class="doc-title">AVURNAVs
+            <span>API Reference</span>
+          </h1>
           <div id="introduction" data-traverse-target="introduction">
-            <h1 class="doc-title">AVURNAVs
-              <span>API Reference</span>
-            </h1>
             <div class="doc-row">
               <div class="doc-copy">
                 <p>Renseigne les AVURNAVs actuellement actifs en France métropolitaine.</p>
@@ -76,7 +76,7 @@
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Retourne les AVURNAVs actuellement en vigueur dans la région d&#39;un Préfet Maritime</p>
+                  <p>Retourne les AVURNAVs actuellement en vigueur dans la région d&#39;un Préfet Maritime. Cet endpoint est limité à 10 requêtes par minute.</p>
                 </section>
               </div>
             </div>
@@ -87,26 +87,20 @@
                     <div class="prop-name">
                       <div class="prop-title">region</div>
                       <span class="json-property-required"></span>
+                      <div class="prop-subtitle"> in path </div>
+                      <div class="prop-subtitle">
+                        <span class="json-property-type">string</span>
+                        <span class="json-property-enum" title="Possible values">
+                          <span class="json-property-enum-item">atlantique</span>,
+                          <span class="json-property-enum-item">manche</span>,
+                          <span class="json-property-enum-item">méditerranée</span>
+                        </span>
+                        <span class="json-property-range" title="Value limits"></span>
+                      </div>
                     </div>
                     <div class="prop-value">
                       <p>Région du Préfet Maritime</p>
                     </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name param-label">type</div>
-                    <div class="prop-value">
-                      <span class="json-property-type">string</span>
-                      <span class="json-property-enum" title="Possible values">
-                        <span class="json-property-enum-item">atlantique</span>,
-                        <span class="json-property-enum-item">manche</span>,
-                        <span class="json-property-enum-item">méditerranée</span>
-                      </span>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name param-label">in</div>
-                    <div class="prop-value">path</div>
                   </div>
                 </section>
               </div>
@@ -127,6 +121,17 @@
                     </div>
                     <div class="prop-value">
                       <p>Une liste d&#39;AVURNAVs actuellement actifs dans la région de ce Préfet Maritime</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-inner">
+                    <div class="prop-name">type</div>
+                    <div class="prop-value">
+                      <span class="json-property-type">
+                        <span class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/AVURNAV">AVURNAV</a>
+                        </span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
                     </div>
                   </div>
                 </section>
@@ -156,6 +161,54 @@
 ]
 </code></pre>
                   <!-- </div> -->
+                </section>
+                <section>
+                  <h5>Response Headers
+                    <span>(200 OK)</span>
+                  </h5>
+                  <section class="swagger-response-headers">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th class="swagger-response-header-name"></th>
+                          <th class="swagger-response-header-description"></th>
+                          <th class="swagger-response-header-data-type"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="swagger-response-header-X-RateLimit-Limit">
+                          <td> X-RateLimit-Limit
+                            <td>
+                              <p>Le nombre de requêtes autorisées dans la période courante</p>
+                            </td>
+                            <td>
+                              <span class="json-property-type">integer</span>
+                              <span class="json-property-range" title="Value limits"></span>
+                            </td>
+                        </tr>
+                        <tr class="swagger-response-header-X-RateLimit-Remaining">
+                          <td> X-RateLimit-Remaining
+                            <td>
+                              <p>Le nombre de requêtes restantes autorisées dans la période courante</p>
+                            </td>
+                            <td>
+                              <span class="json-property-type">integer</span>
+                              <span class="json-property-range" title="Value limits"></span>
+                            </td>
+                        </tr>
+                        <tr class="swagger-response-header-X-RateLimit-Reset">
+                          <td> X-RateLimit-Reset
+                            <td>
+                              <p>Timestamp UNIX indiquant la fin de la période courante</p>
+                            </td>
+                            <td>
+                              <span class="json-property-type">integer</span>
+                              <span class="json-property-range" title="Value limits"></span>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </section>
                 </section>
               </div>
             </div>
