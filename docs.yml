@@ -1,0 +1,101 @@
+---
+  swagger: "2.0"
+  info:
+    version: "0.1"
+    title: "AVURNAVs"
+    description: "Renseigne les AVURNAVs actuellement actifs en France métropolitaine."
+    contact:
+      name: "Antoine Augusti"
+    license:
+      name: "MIT"
+  host: "avurnav.antoine-augusti.fr"
+  basePath: "/"
+  schemes:
+    - "https"
+  produces:
+    - "application/json"
+  paths:
+    /avurnavs/regions/{region}:
+      get:
+        description: "Retourne les AVURNAVs actuellement en vigueur dans la région d'un Préfet Maritime"
+        produces:
+          - "application/json"
+        parameters:
+          - name: region
+            in: path
+            description: Région du Préfet Maritime
+            required: true
+            type: string
+            enum: [atlantique, manche, méditerranée]
+        responses:
+          "200":
+            description: "Une liste d'AVURNAVs actuellement actifs dans la région de ce Préfet Maritime"
+            schema:
+              type: "array"
+              items:
+                $ref: "#/definitions/AVURNAV"
+            headers:
+              X-RateLimit-Limit:
+                description: Le nombre de requêtes autorisées dans la période courante
+                type: integer
+              X-RateLimit-Remaining:
+                description: Le nombre de requêtes restantes autorisées dans la période courante
+                type: integer
+              X-RateLimit-Reset:
+                description: Timestamp UNIX indiquant la fin de la période courante
+                type: integer
+  definitions:
+    AVURNAV:
+      required:
+        - id
+        - number
+        - title
+        - content
+        - latitude
+        - longitude
+        - city
+        - url
+        - valid_from
+        - valid_until
+        - premar_region
+      properties:
+        id:
+          type: integer
+          example: 4242
+          minimum: 1
+        number:
+          type: string
+          pattern: '^\d+\/\d{2}$'
+          example: "1115/18"
+        title:
+          type: string
+          example: "ANTIFER - PHARE DE GATEVILLE"
+        content:
+          type: string
+          example: "LES NAVIGATEURS SONT INFORMES DE LA MISE EN PLACE CE JOUR A TITRE D'ESSAIS D'UN SYSTEME AIS SUR LE PHARE DE GATTEVILLE (MMSI 992271217). (LFLA 30400). POSITION (WGS84): 49-41,8N 001-16,0W"
+        latitude:
+          type: number
+          format: float
+          example: 49.222
+        longitude:
+          type: number
+          format: float
+          example: -1.2654
+        city:
+          type: string
+          example: null
+        url:
+          type: string
+          format: url
+          example: "https://www.premar-manche.gouv.fr/avis-urgents-aux-navigateurs/antifer-phare-gateville-1115.html"
+        valid_from:
+          type: string
+          format: date
+          example: "2018-12-01"
+        valid_until:
+          type: string
+          format: date
+          example: "2018-12-31"
+        premar_region:
+          type: string
+          example: "Atlantique"
