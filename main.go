@@ -35,7 +35,7 @@ func AVURNAVsController(storage *avurnav.Storage) service.WebController {
 		Limit:  10,
 	}
 
-	middleware := stdlib.NewMiddleware(limiter.New(store, rate))
+	middleware := stdlib.NewMiddleware(limiter.New(store, rate), stdlib.WithForwardHeader(true))
 
 	n := negroni.New()
 	n.UseHandler(middleware.Handler(http.HandlerFunc(validator.AVURNAVsRegionController)))
