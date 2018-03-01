@@ -195,5 +195,8 @@
 			"revisionTime": "2018-02-18T17:15:52Z"
 		}
 	],
-	"rootPath": "github.com/AntoineAugusti/avurnav-api"
+	"rootPath": "github.com/AntoineAugusti/avurnav-api",
+	"heroku": {
+		"goVersion": "go1.10"
+	}
 }
