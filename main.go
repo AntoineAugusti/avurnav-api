@@ -23,6 +23,7 @@ var (
 	buildDate = "0001-01-01T00:00:00Z"
 )
 
+// AVURNAVsController constructs a web controller to deal with AVURNAVs
 func AVURNAVsController(storage *avurnav.Storage) service.WebController {
 	wc := service.NewWebController("/avurnavs/regions/{region}")
 	validator := avurnavController{
@@ -49,6 +50,7 @@ type avurnavController struct {
 	storage *avurnav.Storage
 }
 
+// AVURNAVsRegionController lists AVURNAVs for a specific region
 func (c *avurnavController) AVURNAVsRegionController(w http.ResponseWriter, req *http.Request) {
 	res := c.storage.AVURNAVsForRegion(mux.Vars(req)["region"])
 
@@ -73,6 +75,7 @@ func envWithFallback(key, fallback string) string {
 	return val
 }
 
+// NewRedis builds a Redis client from a Redis URL
 func NewRedis(url string) *redis.Client {
 	redisOptions, err := redis.ParseURL(url)
 	if err != nil {
