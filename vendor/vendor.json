@@ -1,12 +1,15 @@
 {
 	"comment": "",
+	"heroku": {
+		"goVersion": "go1.10"
+	},
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "xMuVz5pG7SC7rIezaclcXI8qoiU=",
+			"checksumSHA1": "upzTzUSHQGwlHMk8ruDavrvzOUY=",
 			"path": "github.com/AntoineAugusti/avurnav",
-			"revision": "cfe158654ab5174399940eebe6d0f9ab55e0bbf7",
-			"revisionTime": "2018-02-28T10:59:11Z"
+			"revision": "39fee486ba7e4105e6f67b202d45d6092daeaf0c",
+			"revisionTime": "2018-03-13T09:26:47Z"
 		},
 		{
 			"checksumSHA1": "j5lrUUvdX/IICLK/vg9TG9h6Zvs=",
@@ -195,8 +198,5 @@
 			"revisionTime": "2018-02-18T17:15:52Z"
 		}
 	],
-	"rootPath": "github.com/AntoineAugusti/avurnav-api",
-	"heroku": {
-		"goVersion": "go1.10"
-	}
+	"rootPath": "github.com/AntoineAugusti/avurnav-api"
 }
