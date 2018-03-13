@@ -55,7 +55,6 @@
         - content
         - latitude
         - longitude
-        - city
         - url
         - valid_from
         - valid_until
@@ -83,9 +82,6 @@
           type: number
           format: float
           example: -1.2654
-        city:
-          type: string
-          example: null
         url:
           type: string
           format: url
