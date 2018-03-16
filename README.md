@@ -4,7 +4,7 @@
 
 
 # AVURNAV API
-This library exposes an HTTP API to get navigational warnings for Metropolitan France currently active. Navigational warnings contain information about persons in distress, or objects and events that pose an immediate hazard to navigation. Navigational warnings are called [AVURNAV](https://fr.wikipedia.org/wiki/Avis_urgent_aux_navigateurs) (avis urgent aux navigateurs) in French.
+This library exposes an HTTP API to get navigational warnings for Metropolitan France currently in-force. Navigational warnings contain information about persons in distress, or objects and events that pose an immediate hazard to navigation. Navigational warnings are called [AVURNAV](https://fr.wikipedia.org/wiki/Avis_urgent_aux_navigateurs) (avis urgent aux navigateurs) in French.
 
 It relies on another library: https://github.com/AntoineAugusti/avurnav.
 
