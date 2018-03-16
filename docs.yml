@@ -3,7 +3,7 @@
   info:
     version: "0.1"
     title: "AVURNAVs"
-    description: "Renseigne les AVURNAVs actuellement actifs en France métropolitaine."
+    description: "Tells about in-force navigational warnings in metropolitan France"
     contact:
       name: "Antoine Augusti"
     license:
@@ -18,33 +18,33 @@
     /avurnavs/regions/{region}:
       get:
         description: >
-          Retourne les AVURNAVs actuellement en vigueur dans la région d'un Préfet Maritime.
-          Cet endpoint est limité à 10 requêtes / minute.
+          Returns in-force navigational warnings for the region under the supervision of a specific Préfet Maritime. Navigational warnings are called AVURNAVs ("avis urgents aux navigateurs") in French.
+          This endpoint is limited at 10 HTTP requests / minute / IP address.
         produces:
           - "application/json"
         parameters:
           - name: region
             in: path
-            description: Région du Préfet Maritime
+            description: The Préfet Maritime region
             required: true
             type: string
             enum: [atlantique, manche, méditerranée]
         responses:
           "200":
-            description: "Une liste d'AVURNAVs actuellement actifs dans la région de ce Préfet Maritime"
+            description: "A list of in-force navigational warnings for this region"
             schema:
               type: "array"
               items:
                 $ref: "#/definitions/AVURNAV"
             headers:
               X-RateLimit-Limit:
-                description: Le nombre de requêtes autorisées dans la période courante
+                description: The number of HTTP requests authorized in this current period
                 type: integer
               X-RateLimit-Remaining:
-                description: Le nombre de requêtes restantes autorisées dans la période courante
+                description: The number of HTTP requests remaining in this current period
                 type: integer
               X-RateLimit-Reset:
-                description: Timestamp UNIX indiquant la fin de la période courante
+                description: UNIX timestamp telling when the current period will end
                 type: integer
   definitions:
     AVURNAV:

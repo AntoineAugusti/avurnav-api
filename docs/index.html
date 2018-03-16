@@ -44,7 +44,7 @@
           <div id="introduction" data-traverse-target="introduction">
             <div class="doc-row">
               <div class="doc-copy">
-                <p>Renseigne les AVURNAVs actuellement actifs en France métropolitaine.</p>
+                <p>Tells about in-force navigational warnings in metropolitan France</p>
               </div>
               <div class="doc-examples">
                 <section>
@@ -76,7 +76,7 @@
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-operation-description">
-                  <p>Retourne les AVURNAVs actuellement en vigueur dans la région d&#39;un Préfet Maritime. Cet endpoint est limité à 10 requêtes / minute.</p>
+                  <p>Returns in-force navigational warnings for the region under the supervision of a specific Préfet Maritime. Navigational warnings are called AVURNAVs (&quot;avis urgents aux navigateurs&quot;) in French. This endpoint is limited at 10 HTTP requests / minute / IP address.</p>
                 </section>
               </div>
             </div>
@@ -99,7 +99,7 @@
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p>Région du Préfet Maritime</p>
+                      <p>The Préfet Maritime region</p>
                     </div>
                   </div>
                 </section>
@@ -120,7 +120,7 @@
                       <!-- <span class="swagger-global"></span> <span class="json-schema-reference"><a href=""></a></span> -->
                     </div>
                     <div class="prop-value">
-                      <p>Une liste d&#39;AVURNAVs actuellement actifs dans la région de ce Préfet Maritime</p>
+                      <p>A list of in-force navigational warnings for this region</p>
                     </div>
                   </div>
                   <div class="prop-row prop-inner">
@@ -178,7 +178,7 @@
                         <tr class="swagger-response-header-X-RateLimit-Limit">
                           <td> X-RateLimit-Limit
                             <td>
-                              <p>Le nombre de requêtes autorisées dans la période courante</p>
+                              <p>The number of HTTP requests authorized in this current period</p>
                             </td>
                             <td>
                               <span class="json-property-type">integer</span>
@@ -188,7 +188,7 @@
                         <tr class="swagger-response-header-X-RateLimit-Remaining">
                           <td> X-RateLimit-Remaining
                             <td>
-                              <p>Le nombre de requêtes restantes autorisées dans la période courante</p>
+                              <p>The number of HTTP requests remaining in this current period</p>
                             </td>
                             <td>
                               <span class="json-property-type">integer</span>
@@ -198,7 +198,7 @@
                         <tr class="swagger-response-header-X-RateLimit-Reset">
                           <td> X-RateLimit-Reset
                             <td>
-                              <p>Timestamp UNIX indiquant la fin de la période courante</p>
+                              <p>UNIX timestamp telling when the current period will end</p>
                             </td>
                             <td>
                               <span class="json-property-type">integer</span>
