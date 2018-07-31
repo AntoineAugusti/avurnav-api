@@ -53,6 +53,7 @@ type avurnavController struct {
 // AVURNAVsRegionController lists AVURNAVs for a specific region
 func (c *avurnavController) AVURNAVsRegionController(w http.ResponseWriter, req *http.Request) {
 	res := c.storage.AVURNAVsForRegion(mux.Vars(req)["region"])
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	render.JSON(w, http.StatusOK, res)
 }
