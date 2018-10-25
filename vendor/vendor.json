@@ -6,10 +6,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "Fay4OEQif6yNFU9P+gYHfhzcXiY=",
+			"checksumSHA1": "dYU4EFdiFvG4NpDprvNobaUdBEE=",
 			"path": "github.com/AntoineAugusti/avurnav",
-			"revision": "ff01fe116138c5aa418e1a2bc83202a98bda9d7f",
-			"revisionTime": "2018-10-10T09:10:45Z"
+			"revision": "0f9fa78c98b6d9c7c6843f0eac2182fa2e9f32c3",
+			"revisionTime": "2018-10-25T12:04:25Z"
 		},
 		{
 			"checksumSHA1": "j5lrUUvdX/IICLK/vg9TG9h6Zvs=",
