@@ -19,7 +19,7 @@
       get:
         description: >
           Returns in-force navigational warnings for the region under the supervision of a specific Préfet Maritime. Navigational warnings are called AVURNAVs ("avis urgents aux navigateurs") in French.
-          This endpoint is limited at 10 HTTP requests / minute / IP address.
+          This endpoint is limited at 60 HTTP requests / minute / IP address.
         produces:
           - "application/json"
         parameters:
