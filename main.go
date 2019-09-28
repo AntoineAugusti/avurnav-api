@@ -33,7 +33,7 @@ func AVURNAVsController(storage *avurnav.Storage) service.WebController {
 	store := memory.NewStore()
 	rate := limiter.Rate{
 		Period: 1 * time.Minute,
-		Limit:  10,
+		Limit:  60,
 	}
 
 	middleware := stdlib.NewMiddleware(limiter.New(store, rate), stdlib.WithForwardHeader(true))
