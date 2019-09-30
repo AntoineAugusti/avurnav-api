@@ -13,9 +13,6 @@ import (
 	"github.com/codegangsta/negroni"
 	"github.com/go-redis/redis"
 	"github.com/gorilla/mux"
-	"github.com/ulule/limiter"
-	"github.com/ulule/limiter/drivers/middleware/stdlib"
-	"github.com/ulule/limiter/drivers/store/memory"
 )
 
 var (
@@ -30,16 +27,8 @@ func AVURNAVsController(storage *avurnav.Storage) service.WebController {
 		storage: storage,
 	}
 
-	store := memory.NewStore()
-	rate := limiter.Rate{
-		Period: 1 * time.Minute,
-		Limit:  60,
-	}
-
-	middleware := stdlib.NewMiddleware(limiter.New(store, rate), stdlib.WithForwardHeader(true))
-
 	n := negroni.New()
-	n.UseHandler(middleware.Handler(http.HandlerFunc(validator.AVURNAVsRegionController)))
+	n.UseHandler(http.HandlerFunc(validator.AVURNAVsRegionController))
 
 	wc.AddMethodHandler(service.Get, n.ServeHTTP)
 
