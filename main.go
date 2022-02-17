@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/tls"
 	"flag"
 	"net/http"
 	"os"
@@ -95,8 +96,12 @@ func main() {
 	storage := avurnav.NewStorage(NewRedis(*redisURL))
 
 	go func() {
+		tr := &http.Transport{
+			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		}
 		client := http.Client{
-			Timeout: time.Duration(2 * time.Second),
+			Timeout:   time.Duration(2 * time.Second),
+			Transport: tr,
 		}
 		for _ = range time.NewTicker(60 * time.Second).C {
 			for _, fetcher := range avurnav.NewClient(&client).Fetchers {
